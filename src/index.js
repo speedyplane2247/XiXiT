@@ -28,7 +28,7 @@ alert("Failure on opCode #" + code + ".")
 }
 // Memory Add
 RAM.set = function(type, address, value) {
-  if (value.length > 8 && type == "a") {
+  if (value.length > machineData.ramSize && type == "a") {
     opCode(1)
     CPU.exit()
   }
@@ -46,7 +46,7 @@ RAM.set = function(type, address, value) {
 }
 RAM.get = function(type, address) {
 if (type == "a") {
-if (RAM.a1[address].length > 8) {
+if (RAM.a1[address].length > machineData.ramSize) {
 opCode(2)
 opCode(1)
 opCode(999)

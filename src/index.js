@@ -28,9 +28,21 @@ alert("Failure on opCode #" + code + ".")
 }
 // Memory Add
 RAM.set = function(type, address, value) {
-  if (value.length > 8) {
+  if (value.length > 8 && type == "a") {
     opCode(1)
+    CPU.exit()
   }
+   if (value.length > 32) {
+   opCode(1)
+     CPU.exit()
+   }
+  if (type == "r") {
+    RAM.r1[address] = value
+  }
+  if (type == "a") {
+    RAM.a1[address] = value
+  }
+  
 }
 RAM.get = function(type, address) {
   
@@ -41,4 +53,7 @@ CPU.add = function() {
 }
 CPU.addn = function(word1, word2) {
   
+}
+CPU.exit = function() {
+
 }

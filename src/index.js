@@ -29,7 +29,7 @@ alert("Failure on opCode #" + code + ".")
 // Memory Add
 RAM.set = function(type, address, value) {
   if (value.length > 8) {
-    
+    opCode(1)
   }
 }
 RAM.get = function(type, address) {

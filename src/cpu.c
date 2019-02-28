@@ -12,11 +12,17 @@ Detailed:
 262: Math OutPut (8-bit)
 */
 /*
-Calls:
+RAM Calls:
 RAM.set() : Sets a RAM address
 RAM.get() : Gets a RAM address
 CPU Calls:
 CPU.add() : Grabs RAM, and output ram1 + ram2.
 CPU.addn() : Debug usage, adds two words and returns it.
 CPU.exit() : Disables the CPU
+CPU.sub() : Grabs RAM, and output ram1 - ram2.
+CPU.subn() : Debug usage subs two words and returns it.
+HDD Calls:
+HDD.set() : Sets a sector of HDD
+HDD.get() : Gets a sector of HDD
+BIOS Calls:
 */

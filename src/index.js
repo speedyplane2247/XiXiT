@@ -12,8 +12,8 @@ machineData.ramWORD = 8
 machineData.register = 16
 machineData.registerWORD = 32
 // Memory Init
-RAM.a1 = Array []
-RAM.r1 = Array []
+RAM.a1 = Array [0,0]
+RAM.r1 = Array [0,0]
 RAM.aCurr = 0
 RAM.rCurr = 0
 for (RAM.aCurr = 0; RAM.aCurr < machineData.ramSize; RAM.aCurr++) {

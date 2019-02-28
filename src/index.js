@@ -7,9 +7,7 @@ var ram = new Object()
 var machineData = new Object()
 var RAM = new Object()
 // Machine Data Integers
-machineData.ramSize = 256
 machineData.ramWORD = 8
-machineData.register = 16
 machineData.registerWORD = 32
 // Memory Init
 RAM.a1 = Array [0,0]
@@ -32,7 +30,7 @@ RAM.set = function(type, address, value) {
     opCode(1)
     CPU.exit()
   }
-   if (value.length > 32) {
+   if (value.length > machineData.registerWORD) {
    opCode(1)
      CPU.exit()
    }
@@ -57,7 +55,7 @@ return RAM.a1[address]
 }
 
 if (type == "r") {
-    if (RAM.r1[address].length > 32) {
+    if (RAM.r1[address].length > machineData.registerWORD) {
     opCode(2)
     opCode(1)
     opCode(999)

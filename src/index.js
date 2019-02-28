@@ -45,7 +45,26 @@ RAM.set = function(type, address, value) {
   
 }
 RAM.get = function(type, address) {
-  
+if (type == "a") {
+if (RAM.a1[address].length > 8) {
+opCode(2)
+opCode(1)
+opCode(999)
+} else {
+return RAM.a1[address]
+}
+
+}
+
+if (type == "r") {
+    if (RAM.r1[address].length > 32) {
+    opCode(2)
+    opCode(1)
+    opCode(999)
+    } else {
+    return RAM.r1[address]
+    }
+} 
 }
 // Machine CPU Functions
 CPU.add = function() {

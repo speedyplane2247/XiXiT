@@ -12,3 +12,6 @@ machineData.driveSize = 16
 // Misc BIOS features
 BIOS.allowChanges = 0
 BIOS.allowEmulatedChanges = 0
+// Opcode Information
+BIOS.opCodeHang = 0
+BIOS.opCodeEnabled = 1

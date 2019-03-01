@@ -10,6 +10,7 @@ Detailed:
 265: Math Input (4-bit)
 264: Math Output (4-bit)
 262: Math OutPut (8-bit)
+
 */
 /*
 RAM Calls:
@@ -21,8 +22,14 @@ CPU.addn() : Debug usage, adds two words and returns it.
 CPU.exit() : Disables the CPU
 CPU.sub() : Grabs RAM, and output ram1 - ram2.
 CPU.subn() : Debug usage subs two words and returns it.
+CPU.multi() : Grabs RAM, and output ram1 * ram2 
+CPU.multin() : Debug usage multis two words and returns it.
+CPU.div() : Grabs RAM, and output ram1 / ram2
+CPU.divn() : Debug usage, divides two words and returns it.
 HDD Calls:
 HDD.set() : Sets a sector of HDD
 HDD.get() : Gets a sector of HDD
 BIOS Calls:
+BIOS.write() : Writes information to the BIOS
+BIOS.emulate() : Emulates BIOS informations
 */
